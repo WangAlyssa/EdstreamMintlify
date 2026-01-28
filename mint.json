@@ -1,0 +1,30 @@
+{
+  "name": "EdStream Docs",
+  "favicon": "favicon.svg",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#2D3B45",
+    "dark": "#6366f1"
+  },
+  "anchors": [
+    {
+      "name": "Back to Website",
+      "icon": "arrow-left",
+      "url": "https://www.google.com"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Support",
+      "pages": [
+        "help"
+      ]
+    },
+    {
+      "group": "Documentation",
+      "pages": [
+        "docs"
+      ]
+    }
+  ]
+}
