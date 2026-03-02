@@ -1,30 +1,42 @@
 {
-  "name": "EdStream Docs",
-  "favicon": "favicon.svg",
+  "name": "EdStream Help Center",
+  "logo": {
+    "dark": "/logo/logo.svg",
+    "light": "/logo/logo.svg",
+    "href": "https://wangalyssa.github.io/EdstreamWebpage/"
+  },
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#6366f1",
-    "light": "#2D3B45",
-    "dark": "#6366f1"
+    "light": "#F5F5F5",
+    "dark": "#0A0C10"
   },
-  "anchors": [
+  "font": {
+    "family": "Inter",
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+  },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
+  },
+  "topbarLinks": [
+    {
+      "name": "Go to App",
+      "url": "https://app.edstream.io/"
+    },
     {
       "name": "Back to Website",
-      "icon": "arrow-left",
-      "url": "https://www.google.com"
+      "url": "https://wangalyssa.github.io/EdstreamWebpage/"
     }
   ],
   "navigation": [
     {
       "group": "Support",
-      "pages": [
-        "help"
-      ]
+      "pages": ["help"]
     },
     {
       "group": "Documentation",
-      "pages": [
-        "docs"
-      ]
+      "pages": ["docs"]
     }
   ]
 }
