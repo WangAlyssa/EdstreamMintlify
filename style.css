@@ -1,95 +1,53 @@
-/* * Mintlify Dark Mode Overrides - EdStream Theme 
- * Translating Tailwind config to raw CSS overrides.
- */
-
-/* 1. Global Background & Typography */
-.dark body, 
-.dark #background, 
-.dark main,
-.dark .mintlify-container {
-    background-color: #0A0C10 !important; /* edstream-bg */
-    color: #9ca3af !important; /* tailwind gray-400 */
+/* 1. 强制全局极黑背景 (和你的主页 #0A0C10 统一) */
+html.dark, body, main, #__next, .bg-background-light, .dark\:bg-background-dark {
+    background-color: #0A0C10 !important;
 }
 
-/* Ensure headings pop in stark white */
-.dark h1, 
-.dark h2, 
-.dark h3, 
-.dark h4, 
-.dark h5, 
-.dark h6 {
-    color: #ffffff !important; 
-}
-
-/* Soft gray for standard body text */
-.dark p, 
-.dark span, 
-.dark li, 
-.dark .prose {
-    color: #9ca3af !important; 
-}
-
-/* 2. Nav & Sidebar (Glassmorphism) */
-.dark nav, 
-.dark navbar, 
-.dark header,
-.dark aside,
-.dark .sidebar,
-.dark .group\/sidebar {
-    background-color: rgba(10, 12, 16, 0.8) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+/* 2. 顶部导航栏毛玻璃效果 */
+header, .sticky.top-0 {
+    background-color: rgba(10, 12, 16, 0.7) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
-/* 3. Cards & Accordions (Bento Grid Style) */
-.dark .card, 
-.dark .accordion,
-.dark .mintlify-card,
-.dark .step,
-.dark .response-field {
+/* 3. 左侧侧边栏毛玻璃效果 */
+nav, aside, .sidebar {
+    background-color: rgba(30, 30, 45, 0.3) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 4. FAQ 手风琴 (Accordion) 和 卡片 (Cards) 高级质感 */
+.prose details, 
+.accordion, 
+.card,
+.group.relative.flex {
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 16px !important;
-    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5) !important; /* shadow-soft */
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important; /* ease-apple */
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5) !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 12px !important;
 }
 
-/* Hover effect for interactive cards */
-.dark a .card:hover, 
-.dark .accordion:hover,
-.dark a .mintlify-card:hover {
-    border-color: rgba(255, 255, 255, 0.15) !important;
+/* 卡片悬停时的发光交互 */
+.prose details:hover, 
+.card:hover,
+.group.relative.flex:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(99, 102, 241, 0.4) !important; /* edstream-accent 颜色 */
     transform: translateY(-2px) !important;
-    background: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* 4. Accents & Interactive Elements */
-.dark a,
-.dark .text-primary,
-.dark .group:hover .group-hover\:text-primary {
-    color: #6366f1 !important; /* edstream-accent */
-    transition: color 0.3s ease !important;
-}
-
-.dark a:hover {
-    color: #818cf8 !important; /* slightly lighter for hover state */
-}
-
-/* Call-to-action buttons mirroring the Sign In button */
-.dark button.primary,
-.dark .bg-primary,
-.dark .button-primary {
-    background-color: #6366f1 !important; /* edstream-accent */
+/* 5. 调整文字颜色，确保在深色背景下清晰 */
+h1, h2, h3, h4, h5, h6 {
     color: #ffffff !important;
-    border-radius: 9999px !important; /* rounded-full */
-    box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.4) !important; /* shadow-glow */
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
-
-.dark button.primary:hover,
-.dark .bg-primary:hover {
-    transform: translateY(-2px) !important;
-    opacity: 0.9 !important;
+p, span, div, li {
+    color: #9ca3af !important; /* 柔和的灰色 */
+}
+a {
+    color: #6366f1 !important; /* 你的主题蓝紫色 */
 }
