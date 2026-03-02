@@ -22,59 +22,26 @@
   },
   "topbarLinks": [
     {
-      "name": "Go to App",
-      "url": "https://app.edstream.io/"
+      "name": "Back to EdStream",
+      "url": "https://wangalyssa.github.io/EdstreamWebpage/"
     },
     {
-      "name": "Back to Website",
-      "url": "https://wangalyssa.github.io/EdstreamWebpage/"
+      "name": "Open App",
+      "url": "https://app.edstream.io/"
     }
   ],
   "navigation": [
     {
-      "group": "Welcome",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "help-center/faq"
-      ]
+      "group": "Getting Started",
+      "pages": ["introduction"]
     },
     {
-      "group": "Core Features",
-      "pages": [
-        "features/channels-and-dms",
-        "features/centralized-requests",
-        "features/media-sorting",
-        "features/code-syntax-highlighting",
-        "features/search-and-history"
-      ]
+      "group": "User Guides",
+      "pages": ["student-guide", "instructor-guide"]
     },
     {
-      "group": "For Instructors & TAs",
-      "pages": [
-        "instructors/workspace-settings",
-        "instructors/roles-and-permissions",
-        "instructors/analytics",
-        "instructors/managing-large-courses"
-      ]
-    },
-    {
-      "group": "Integrations",
-      "pages": [
-        "integrations/canvas-lti",
-        "integrations/blackboard",
-        "integrations/moodle",
-        "integrations/api-reference"
-      ]
-    },
-    {
-      "group": "Security & Legal",
-      "pages": [
-        "security/overview",
-        "security/ferpa-compliance",
-        "security/data-privacy",
-        "security/terms-of-service"
-      ]
+      "group": "Features & Resources",
+      "pages": ["developer-hub", "security", "help-center/faq"]
     }
   ]
 }
