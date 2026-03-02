@@ -32,12 +32,49 @@
   ],
   "navigation": [
     {
-      "group": "Support",
-      "pages": ["help"]
+      "group": "Welcome",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "help-center/faq"
+      ]
     },
     {
-      "group": "Documentation",
-      "pages": ["docs"]
+      "group": "Core Features",
+      "pages": [
+        "features/channels-and-dms",
+        "features/centralized-requests",
+        "features/media-sorting",
+        "features/code-syntax-highlighting",
+        "features/search-and-history"
+      ]
+    },
+    {
+      "group": "For Instructors & TAs",
+      "pages": [
+        "instructors/workspace-settings",
+        "instructors/roles-and-permissions",
+        "instructors/analytics",
+        "instructors/managing-large-courses"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/canvas-lti",
+        "integrations/blackboard",
+        "integrations/moodle",
+        "integrations/api-reference"
+      ]
+    },
+    {
+      "group": "Security & Legal",
+      "pages": [
+        "security/overview",
+        "security/ferpa-compliance",
+        "security/data-privacy",
+        "security/terms-of-service"
+      ]
     }
   ]
 }
