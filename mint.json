@@ -6,6 +6,7 @@
     "href": "https://wangalyssa.github.io/EdstreamWebpage/"
   },
   "favicon": "/favicon.svg",
+  "css": "style.css",
   "colors": {
     "primary": "#6366f1",
     "light": "#F5F5F5",
