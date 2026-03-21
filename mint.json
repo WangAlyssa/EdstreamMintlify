@@ -8,26 +8,36 @@
   "favicon": "/favicon.svg",
   "css": "style.css",
   "colors": {
-    "primary": "#6366f1",
-    "light": "#F5F5F5",
-    "dark": "#0A0C10"
+    "primary": "#567cbd",
+    "light": "#ffffff",
+    "dark": "#2f4156"
   },
   "font": {
     "family": "Inter",
     "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
   },
   "modeToggle": {
-    "default": "dark",
+    "default": "light",
     "isHidden": true
   },
   "topbarLinks": [
     {
-      "name": "Back to EdStream",
+      "name": "Back to Website",
       "url": "https://wangalyssa.github.io/EdstreamWebpage/"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Open App",
+    "url": "https://app.edstream.io/"
+  },
+  "tabs": [
+    {
+      "name": "User Guides",
+      "url": "introduction"
     },
     {
-      "name": "Open App",
-      "url": "https://app.edstream.io/"
+      "name": "Admin & IT",
+      "url": "developer-hub"
     }
   ],
   "navigation": [
@@ -36,12 +46,12 @@
       "pages": ["introduction"]
     },
     {
-      "group": "User Guides",
+      "group": "Platform Mastery",
       "pages": ["student-guide", "instructor-guide"]
     },
     {
-      "group": "Features & Resources",
-      "pages": ["developer-hub", "security", "help-center/faq"]
+      "group": "System & Compliance",
+      "pages": ["developer-hub", "security"]
     }
   ]
 }

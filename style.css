@@ -1,18 +1,21 @@
 /* ================================================================
-   EdStream Help Center - Premium Brand CSS
-   Deep Dark Theme | Glassmorphism | Apple-like Aesthetic
+   EdStream Help Center - Light Premium Brand CSS
+   Clean Aesthetic | Deep Blue (#2f4156) | Medium Blue (#567cbd)
    ================================================================ */
 
 :root {
-  /* Brand Colors */
-  --color-primary: #6366f1;
-  --color-secondary: #8b5cf6;
-  --color-bg: #0A0C10;
-  --color-surface: rgba(15, 23, 42, 0.6);
-  --color-border: rgba(148, 163, 184, 0.1);
-  --color-text: #ffffff;
-  --color-text-secondary: #cbd5e1;
-  --color-text-tertiary: #94a3b8;
+  /* Strict 4-Color Palette */
+  --color-primary: #567cbd;       /* Medium Blue */
+  --color-secondary: #2f4156;     /* Deep Blue */
+  --color-bg: #f5efeb;            /* Off-White / Beige */
+  --color-surface: #ffffff;       /* Pure White */
+  
+  /* Text & Borders based on Deep Blue */
+  --color-border: rgba(47, 65, 86, 0.1); 
+  --color-border-hover: rgba(86, 124, 189, 0.3); /* Medium Blue opacity */
+  --color-text: #2f4156;
+  --color-text-secondary: rgba(47, 65, 86, 0.8);
+  --color-text-tertiary: rgba(47, 65, 86, 0.5);
 
   /* Spacing */
   --radius-sm: 8px;
@@ -25,7 +28,7 @@
    ================================================================ */
 
 html, body {
-  background-color: var(--color-bg);
+  background-color: var(--color-bg) !important;
   color: var(--color-text-secondary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
@@ -35,6 +38,7 @@ html, body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text) !important;
+  font-family: '"Playfair Display"', serif; /* Matching landing page headers */
   font-weight: 700;
   letter-spacing: -0.2px;
 }
@@ -59,7 +63,7 @@ a:hover {
 header, 
 nav.sticky.top-0,
 .navbar {
-  background: rgba(10, 12, 16, 0.7) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border-bottom: 1px solid var(--color-border) !important;
@@ -67,9 +71,7 @@ nav.sticky.top-0,
 
 /* Sidebar */
 aside, nav, .sidebar {
-  background: var(--color-surface) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
+  background: var(--color-bg) !important;
   border-right: 1px solid var(--color-border) !important;
 }
 
@@ -84,7 +86,7 @@ aside, nav, .sidebar {
   background: var(--color-surface) !important;
   border: 1px solid var(--color-border) !important;
   border-radius: var(--radius-lg) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(47, 65, 86, 0.05) !important;
   transition: all 0.3s ease !important;
   margin-bottom: 16px !important;
 }
@@ -92,10 +94,9 @@ aside, nav, .sidebar {
 .card:hover,
 .prose details:hover,
 [class*="CardGroup"]:hover {
-  background: rgba(15, 23, 42, 0.8) !important;
-  border-color: rgba(99, 102, 241, 0.3) !important;
+  border-color: var(--color-border-hover) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(47, 65, 86, 0.08) !important;
 }
 
 details summary {
@@ -119,14 +120,15 @@ details > *:not(summary) {
 
 /* Code Blocks */
 pre, code {
-  background: rgba(15, 23, 42, 0.9) !important;
+  background: var(--color-surface) !important;
   border: 1px solid var(--color-border) !important;
-  color: #e0e7ff !important;
+  color: var(--color-text) !important;
   border-radius: var(--radius-md) !important;
 }
 
 code {
   color: var(--color-primary) !important;
+  background: rgba(86, 124, 189, 0.1) !important;
   padding: 2px 6px !important;
 }
 
@@ -155,8 +157,7 @@ textarea:focus,
 select:focus {
   outline: none !important;
   border-color: var(--color-primary) !important;
-  background: rgba(15, 23, 42, 0.8) !important;
-  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1) !important;
+  box-shadow: 0 0 0 2px rgba(86, 124, 189, 0.2) !important; /* Medium blue ring */
 }
 
 /* Info/Alert Boxes */
@@ -172,55 +173,21 @@ select:focus {
 }
 
 [class*="Info"] {
-  background: rgba(99, 102, 241, 0.05) !important;
+  background: rgba(86, 124, 189, 0.05) !important; /* Light medium blue bg */
   border-left-color: var(--color-primary) !important;
-  color: #c7d2fe !important;
+  color: var(--color-text) !important;
 }
 
 [class*="Warning"] {
   background: rgba(245, 158, 11, 0.05) !important;
   border-left-color: #f59e0b !important;
-  color: #fcd34d !important;
+  color: var(--color-text) !important;
 }
 
 [class*="Success"] {
   background: rgba(16, 185, 129, 0.05) !important;
   border-left-color: #10b981 !important;
-  color: #86efac !important;
-}
-
-/* Animations */
-@keyframes slideDownFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  color: var(--color-text) !important;
 }
 
 /* Responsive */
@@ -233,4 +200,60 @@ select:focus {
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.25rem; }
   h3 { font-size: 1.1rem; }
+}
+
+/* ================================================================
+   Advanced UI/UX Details
+   ================================================================ */
+
+/* 1. Custom Elegant Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(47, 65, 86, 0.15); /* Very subtle Deep Blue */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(86, 124, 189, 0.4); /* Medium Blue on hover */
+}
+
+/* 2. Sidebar Active Item Polish */
+.sidebar a.active {
+  background-color: rgba(86, 124, 189, 0.08) !important; /* Subtle Medium Blue fill */
+  border-left: 3px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+}
+
+/* 3. Image Hover FX for MDX */
+.prose img {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(47, 65, 86, 0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.prose img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(47, 65, 86, 0.12);
+}
+
+/* 4. Button consistency */
+button.primary, .topbar-cta-button {
+  background-color: var(--color-secondary) !important; /* Deep blue default */
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+button.primary:hover, .topbar-cta-button:hover {
+  background-color: var(--color-primary) !important; /* Medium blue hover */
+  transform: translateY(-1px);
 }
