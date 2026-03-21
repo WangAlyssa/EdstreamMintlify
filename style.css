@@ -38,7 +38,7 @@ html, body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text) !important;
-  font-family: '"Playfair Display"', serif; /* Matching landing page headers */
+  font-family: '"Playfair Display"', serif;
   font-weight: 700;
   letter-spacing: -0.2px;
 }
@@ -69,9 +69,14 @@ nav.sticky.top-0,
   border-bottom: 1px solid var(--color-border) !important;
 }
 
+/* Main Content Area */
+main {
+  background-color: var(--color-bg) !important; /* Keep Beige */
+}
+
 /* Sidebar */
 aside, nav, .sidebar {
-  background: var(--color-bg) !important;
+  background: var(--color-surface) !important; /* Pure White for hierarchy */
   border-right: 1px solid var(--color-border) !important;
 }
 
@@ -157,7 +162,23 @@ textarea:focus,
 select:focus {
   outline: none !important;
   border-color: var(--color-primary) !important;
-  box-shadow: 0 0 0 2px rgba(86, 124, 189, 0.2) !important; /* Medium blue ring */
+  box-shadow: 0 0 0 2px rgba(86, 124, 189, 0.2) !important;
+}
+
+/* Search Bar Button (Header) */
+#search-bar-button,
+button[class*="search"] {
+  background-color: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--color-text-secondary) !important;
+  box-shadow: 0 2px 8px rgba(47, 65, 86, 0.04) !important;
+  transition: all 0.2s ease;
+}
+
+#search-bar-button:hover,
+button[class*="search"]:hover {
+  border-color: rgba(86, 124, 189, 0.4) !important;
 }
 
 /* Info/Alert Boxes */
@@ -173,7 +194,7 @@ select:focus {
 }
 
 [class*="Info"] {
-  background: rgba(86, 124, 189, 0.05) !important; /* Light medium blue bg */
+  background: rgba(86, 124, 189, 0.05) !important;
   border-left-color: var(--color-primary) !important;
   color: var(--color-text) !important;
 }
@@ -190,20 +211,8 @@ select:focus {
   color: var(--color-text) !important;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .card, [class*="CardGroup"] {
-    border-radius: var(--radius-md) !important;
-    margin-bottom: 12px !important;
-  }
-
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1.1rem; }
-}
-
 /* ================================================================
-   Advanced UI/UX Details
+   Advanced UI/UX Details & Hierarchy
    ================================================================ */
 
 /* 1. Custom Elegant Scrollbar */
@@ -217,21 +226,30 @@ select:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(47, 65, 86, 0.15); /* Very subtle Deep Blue */
+  background: rgba(47, 65, 86, 0.15);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(86, 124, 189, 0.4); /* Medium Blue on hover */
+  background: rgba(86, 124, 189, 0.4);
 }
 
 /* 2. Sidebar Active Item Polish */
+[class*="active"], 
+a[href].active,
+.group.active,
 .sidebar a.active {
-  background-color: rgba(86, 124, 189, 0.08) !important; /* Subtle Medium Blue fill */
+  background-color: rgba(86, 124, 189, 0.08) !important;
   border-left: 3px solid var(--color-primary) !important;
   color: var(--color-primary) !important;
   font-weight: 600 !important;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+}
+
+/* Right-side TOC hover state */
+.toc-item:hover,
+a[href^="#"]:hover {
+  color: var(--color-primary) !important;
 }
 
 /* 3. Image Hover FX for MDX */
@@ -248,12 +266,25 @@ select:focus {
 
 /* 4. Button consistency */
 button.primary, .topbar-cta-button {
-  background-color: var(--color-secondary) !important; /* Deep blue default */
+  background-color: var(--color-secondary) !important;
   color: white !important;
   transition: all 0.3s ease !important;
+  border-radius: var(--radius-md) !important;
 }
 
 button.primary:hover, .topbar-cta-button:hover {
-  background-color: var(--color-primary) !important; /* Medium blue hover */
+  background-color: var(--color-primary) !important;
   transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card, [class*="CardGroup"] {
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 12px !important;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
 }
